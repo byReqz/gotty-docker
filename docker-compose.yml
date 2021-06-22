@@ -1,0 +1,15 @@
+version: '2.3'
+
+services:
+  gotty-docker:
+    container_name: gotty-docker
+    image: byreqz/gotty-docker:latest
+    restart: unless-stopped
+    ports:
+     - 1234:1234
+    environment:
+     - port=1234
+     - userpass=user:pass
+     - title=1234
+     - pkgs=neofetch
+     - command=neofetch
