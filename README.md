@@ -2,12 +2,23 @@
 
 this is a dynamically built gotty container
 
-#### features:
+## features:
 - select packages with environment values
 - easily run in docker composes
 - available as alpine and debian base images
 
-### compose
+## branches
+### alpine
+- available with :latest
+- base alpine image + curl, jq, tmux and libc6-compat (light glibc compatibility to get gotty running)
+- main and community repo available
+
+### debian
+- available with :debian
+- base image + curl, jq and tmux
+- sid main repo available
+
+## compose
 this example can also be found in the repo
 
 ```yaml
