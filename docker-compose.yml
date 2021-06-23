@@ -11,5 +11,5 @@ services:
      - port=1234
      - userpass=user:pass
      - title=1234
-     - pkgs=neofetch
-     - command=neofetch
+     - pkgs=htop
+     - command=htop
