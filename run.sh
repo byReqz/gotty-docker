@@ -1,4 +1,4 @@
-#!/bin/ash
+#!/bin/sh
 
 if [ -z "$port" ];then
 	port=8080
@@ -15,8 +15,8 @@ if [ -n "$pkgs" ];then
 fi
 if [ -z "$command" ];then
 	apk update
-	apk add pfetch figlet
-	command="pfetch && figlet no command set"
+	apk add figlet
+	command="curl -s https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch | ash && figlet no command set && read swag"
 fi
 
-./gotty -p "$port" $creds --title-format "$title" tmux new-session -A -s $command "$title"
+/gotty -p "$port" $creds --title-format "$title" tmux new-session -A -s "$title" "$command"
