@@ -11,7 +11,7 @@ if [ -z "$title" ];then
 fi
 if [ -n "$pkgs" ];then
 	apt-get update
-	apt-get install $pkgs
+	apt-get install -y $pkgs
 fi
 if [ -z "$command" ];then
 	apt-get update
