@@ -2,8 +2,8 @@ version: '2.3'
 
 services:
   gotty-docker:
-    container_name: gotty-docker
-    image: byreqz/gotty-docker:latest
+    container_name: gotty
+    image: byreqz/gotty:latest
     restart: unless-stopped
     ports:
      - 1234:1234
