@@ -19,5 +19,8 @@ if [ -z "$command" ];then
 	command="curl -s https://raw.githubusercontent.com/dylanaraps/pfetch/master/pfetch | bash && figlet no command set && read swag"
 fi
 
-/gotty -p "$port" $creds --title-format "$title" tmux new-session -A -s "$title" "$command"
-
+if [ "$use_tmux" == "false" ];then
+	/gotty -p "$port" $creds --title-format "$title" "$command"
+else
+	/gotty -p "$port" $creds --title-format "$title" tmux new-session -A -s "$title" "$command"
+fi
