@@ -25,6 +25,7 @@ this is a dynamically built gotty container
 - pkgs - additional packages to install when the container is started (optional, def. none)
 - command - the command to run (required, def. none/pfetch)
 - use_tmux - either open a subshell for every page load (false) or just attach to a single shell started at the beginning (true) (optional, def. true)
+- allow_write - allow users to send input, should be used with auth (optional, def. false)
 
 ## compose
 this example can also be found in the repo

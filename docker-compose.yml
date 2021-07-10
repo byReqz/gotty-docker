@@ -14,3 +14,4 @@ services:
      - pkgs=htop
      - command=htop
      - use_tmux=true
+     - allow_write=false

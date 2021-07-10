@@ -6,6 +6,9 @@ fi
 if [ -n "$userpass" ];then
 	creds="-c "$userpass""
 fi
+if [ "$allow_write" == "true" ];then
+	allow_write="-w"
+fi
 if [ -z "$title" ];then
 	title=gotty
 fi
@@ -20,7 +23,7 @@ if [ -z "$command" ];then
 fi
 
 if [ "$use_tmux" == "false" ];then
-	/gotty -p "$port" $creds --title-format "$title" "$command"
+	/gotty -p "$port" $allow_write $creds --title-format "$title" "$command"
 else
-	/gotty -p "$port" $creds --title-format "$title" tmux new-session -A -s "$title" "$command"
+	/gotty -p "$port" $allow_write $creds --title-format "$title" tmux new-session -A -s "$title" "$command"
 fi
