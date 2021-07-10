@@ -24,6 +24,7 @@ this is a dynamically built gotty container
 - title - set application title (browser and tmux session title, def. gotty)
 - pkgs - additional packages to install when the container is started (optional, def. none)
 - command - the command to run (required, def. none/pfetch)
+- use_tmux - either open a subshell for every page load (false) or just attach to a single shell started at the beginning (true) (optional, def. true)
 
 ## compose
 this example can also be found in the repo
@@ -44,6 +45,7 @@ services:
      - title=1234
      - pkgs=htop
      - command=htop
+     - use_tmux=true
 ```
 
 

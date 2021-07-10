@@ -13,3 +13,4 @@ services:
      - title=1234
      - pkgs=htop
      - command=htop
+     - use_tmux=true
